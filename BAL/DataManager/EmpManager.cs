@@ -1,4 +1,12 @@
-﻿using BLL.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
+using IObjects;
+using BLL.Models;
 using IObjects.Repository;
 
 namespace BLL.DataManager

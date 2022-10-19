@@ -17,8 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BAL\BL.csproj" />
-    <ProjectReference Include="..\DAL1\DAL1.csproj" />
+    <ProjectReference Include="..\BAL\BLL.csproj" />
     <ProjectReference Include="..\IObjects\IObjects.csproj" />
   </ItemGroup>
 

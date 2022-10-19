@@ -1,6 +1,9 @@
-﻿using BLL.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using BLL.Models;
 using IObjects.Repository;
-using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore.Query.Internal;
+using System.Security.Cryptography.X509Certificates;
 
 namespace WebApiNtyerCore.Controllers
 {
@@ -17,14 +20,14 @@ namespace WebApiNtyerCore.Controllers
         }
         [HttpGet]
         //get all employee
-        public IActionResult GetAll()
+        public IActionResult Get()
         {
             IEnumerable<Employee> employees = _dataRepository.GetAll();
             return Ok(employees);
         }
        // get by id
         [HttpGet("{id}", Name = "Get")]
-        public IActionResult Getbyid(int id)
+        public IActionResult Get(int id)
         {
             Employee employee = _dataRepository.Get(id);
             if (employee == null)
@@ -34,23 +37,22 @@ namespace WebApiNtyerCore.Controllers
             return Ok(employee);
         }
         //add employee
-        [HttpPost]
-        public IActionResult AddEmp(Employee employee)
+        public IActionResult Post(Employee employee)
         {
           
             _dataRepository.Add(employee);
             return Ok();
         }
-        //update Emp
-        [HttpPut("{id}")]
-         public IActionResult UpdateEmp(int id,Employee employee)
+            //update Emp
+            [HttpPut("{id}")]
+            public IActionResult Put(int id,Employee employee)
         {
             Employee employee1 = _dataRepository.Get(id);
             _dataRepository.Update(employee1,employee);
             return NoContent();
         }
         [HttpDelete("{id}")]
-        public IActionResult DeleteEmp(int id)
+        public IActionResult Delete(int id)
         {
             Employee employee = _dataRepository.Get(id);
             _dataRepository.Delete(employee);
