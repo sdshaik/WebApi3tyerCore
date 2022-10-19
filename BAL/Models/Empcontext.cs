@@ -1,6 +1,4 @@
-﻿using IObjects;
-using Microsoft.EntityFrameworkCore;
-using BLL.Models;
+﻿using Microsoft.EntityFrameworkCore;
 namespace BLL.Models
 {
     public class Empcontext : DbContext

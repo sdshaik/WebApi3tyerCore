@@ -1,13 +1,9 @@
-﻿using IObjects;
-using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Net.NetworkInformation;
-using System.Security.Principal;
 
 namespace BLL.Models
 {
-    public class Employee 
+    public class Employee
     {
         public Employee()
         {
